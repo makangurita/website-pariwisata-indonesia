@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:rgb(234, 239, 242);
+    min-height: 100vh;
+}
+header {
+    position: fixed;
+    z-index: 10; 
+        background: linear-gradient(to bottom, rgba(171, 185, 193, 0.95), rgba(255, 255, 255, 0.134));
+        box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.558);
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        backdrop-filter: blur(5px);
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        margin-bottom: 2rem;
+        width: 99%;
+    }
+    nav {
+        background: transparent;
+        margin-left: auto;
+        height: 55px;
+    }
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li { 
+        position: relative;
+        margin: 0 15px;
+    }
+    nav ul li a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-weight:lighter;
+        padding: 8px 12px;
+        display: block;
+    }
+    nav ul li a:hover{
+        background: rgb(195, 228, 239);
+        color: rgb(45, 44, 51);
+        border-radius: 5px;
+    }
+    nav ul li ul {
+        display: none;
+        position: absolute;
+        top: 35px;
+        left: 0;
+        background: linear-gradient(to bottom, rgba(112, 128, 134, 0.95), rgba(255, 255, 255, 0.322));
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-radius: 5px;
+    }
+    nav ul li ul li {
+        margin: 0;
+        width: 150px;
+    }
+    nav ul li ul li a {
+        padding: 10px;
+        font-weight: normal;
+    }
+    nav ul li:hover ul {
+        display: block;
+    }
+    .identitas {
+        text-align:left;
+        margin: 0;
+        margin-left: 20px;
+        font-size: 15px;
+        color:rgb(250, 250, 250);
+        font-family:'Cochin';
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        text-decoration: none;
+    }
+    .identitas h4 {
+        color: rgb(44, 55, 69);
+        font-family: 'serif';
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+        header img {
+        width: 80px;
+        height: auto;
+    }
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background: linear-gradient(to bottom, rgba(66, 89, 101, 0.95), rgba(255, 255, 255, 0.221));
+    backdrop-filter: blur(50px);
+    box-shadow: 2px 2px 70px rgba(0, 0, 0, 0.529);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property: right;
+}
+
+
+main {
+  color: white;
+  padding: 200px 20px 80px;
+  text-align: center;
+  min-height: 100vh;
+}
+#judul-wisata {
+  font-size: 3rem;
+  color: #165e6e;
+  text-shadow: 0 0 25px #3c6d89;
+  letter-spacing: 2px;
+  font-family: 'cochin';
+  margin-bottom: 10px;
+}
+
+#subjudul-wisata {
+  color: #262e2f;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 50px;
+}
+
+.daftar-wisata {
+  border-radius: 25px;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.wisata {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+
+.artikel-wisata {
+  background:#c4dee2;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  width: 320px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.artikel-wisata:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 35px rgba(7, 45, 57, 0.4);
+}
+
+.fotowisata {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Judul tiap artikel --- */
+.artikel-wisata h1 {
+  font-size: 1.3rem;
+  color: #111314;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(76, 201, 240, 0.5);
+}
+
+/* --- Paragraf --- */
+.artikel-wisata p {
+  font-size: 0.95rem;
+  color: #2c2f30;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* --- Link lokasi --- */
+.artikel-wisata a {
+  color: #4cc9f0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.artikel-wisata a:hover {
+  color: #90e0ef;
+}
+.artikel-wisata iframe {
+  border-radius: 2em;
+  border: 2px solid rgb(63, 81, 91);
+  width: 250px;
+  height: 150px;
+}
+@media (max-width: 768px) {
+  main {
+    padding: 140px 15px 60px; /* kurangin jarak biar gak terlalu jauh */
+  }
+
+  #judul-wisata {
+    font-size: 2.2rem; /* lebih kecil biar pas di layar HP */
+  }
+
+  #subjudul-wisata {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .daftar-wisata {
+    flex-direction: column; /* biar card-card menumpuk ke bawah */
+    align-items: center;
+    padding: 40px 20px;
+    gap: 25px;
+    border-radius: 20px;
+  }
+
+  .artikel-wisata {
+    width: 90%; /* isi hampir seluruh lebar layar */
+    padding: 15px;
+  }
+
+  .fotowisata {
+    height: 180px; /* sedikit lebih kecil */
+  }
+
+  .artikel-wisata h1 {
+    font-size: 1.1rem;
+  }
+
+  .artikel-wisata p {
+    font-size: 0.9rem;
+  }
+}
+
+footer {
+    background: rgb(43, 50, 62);
+    color: #e6f6ff;
+    text-align: center;
+    padding: 25px 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer h3 {
+    color: #d6e3e5;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.footer-contact div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: #d8f3ff;
+    background: rgba(0, 255, 255, 0.05);
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.footer-contact div:hover {
+    background: rgba(0, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.footer-contact i {
+    color: #00e0ff;
+    text-shadow: 0 0 8px #00e0ff;
+    font-size: 1rem;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+    .footer-contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}

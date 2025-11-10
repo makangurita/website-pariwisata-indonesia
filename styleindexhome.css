@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:rgb(234, 239, 242);
+    min-height: 100vh;
+}
+header {
+    position: fixed;
+    z-index: 10; 
+        background: linear-gradient(to bottom, rgba(171, 185, 193, 0.95), rgba(255, 255, 255, 0.134));
+        box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.558);
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        backdrop-filter: blur(5px);
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        margin-bottom: 2rem;
+        width: 99%;
+    }
+    nav {
+        background: transparent;
+        margin-left: auto;
+        height: 55px;
+    }
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li { 
+        position: relative;
+        margin: 0 15px;
+    }
+    nav ul li a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-weight:lighter;
+        padding: 8px 12px;
+        display: block;
+    }
+    nav ul li a:hover{
+        background: rgb(195, 228, 239);
+        color: rgb(45, 44, 51);
+        border-radius: 5px;
+    }
+    nav ul li ul {
+        display: none;
+        position: absolute;
+        top: 35px;
+        left: 0;
+        background: linear-gradient(to bottom, rgba(112, 128, 134, 0.95), rgba(255, 255, 255, 0.322));
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-radius: 5px;
+    }
+    nav ul li ul li {
+        margin: 0;
+        width: 150px;
+    }
+    nav ul li ul li a {
+        padding: 10px;
+        font-weight: normal;
+    }
+    nav ul li:hover ul {
+        display: block;
+    }
+    .identitas {
+        text-align:left;
+        margin: 0;
+        margin-left: 20px;
+        font-size: 15px;
+        color:rgb(250, 250, 250);
+        font-family:'Cochin';
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+    .identitas h4 {
+        color: rgb(44, 55, 69);
+        font-family: 'serif';
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+    header img {
+        width: 80px;
+        height: auto;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background: linear-gradient(to bottom, rgba(66, 89, 101, 0.95), rgba(255, 255, 255, 0.221));
+        backdrop-filter: blur(50px);
+        box-shadow: 2px 2px 70px rgba(0, 0, 0, 0.529);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        overflow-y: auto;
+        transition: 0.6s ease;
+        transition-property: right;
+    }
+    .slider-wrapper {
+        position: relative;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .slider-wrapper::before {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 750px;
+       background: linear-gradient(to top, rgba(114, 178, 197, 0.838), rgba(255, 255, 255, 0)) ;
+       z-index: 1;
+    }
+
+.slider {
+        display: flex;
+        aspect-ratio: 16/9;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    }
+.slider::-webkit-scrollbar {
+        display: none;
+    }
+.slider video {
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+        width: 100%;
+        height: 750px;
+    }
+.slider-nav {
+        z-index: 5;
+        display: flex;
+        column-gap: 20px;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        bottom: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+.slider-nav a {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: aliceblue;
+        cursor: pointer;
+        opacity: 0.75;
+        transition: 0.3s ease ;
+    }
+.slider-nav a:hover {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+.hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        font-family:'Cochin';
+        z-index: 2;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -45%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+.cardcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px;
+  margin-top: -100px;
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.intro {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 210px;
+  background: rgba(29, 37, 48, 0.758);
+  color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.card:hover .intro {
+  transform: translateY(0);
+}
+
+.intro h1 {
+  font-size: 22px;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+.intro p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+}
+
+.intro a {
+  color: #fff;
+  text-decoration: underline;
+  z-index: 2;
+}
+
+.card:hover img {
+  filter: brightness(60%);
+}
+main {
+        min-height: 100vh;
+        background: url(fotovideo/batik.jpg);
+}
+@media(max-width: 800px) {
+    .hideonmobile {
+        display: none;
+    }
+}
+.block {
+    animation: appear 1s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    background: rgb(43, 50, 62);
+    color: #e6f6ff;
+    text-align: center;
+    padding: 25px 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer h3 {
+    color: #d6e3e5;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.footer-contact div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: #d8f3ff;
+    background: rgba(0, 255, 255, 0.05);
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.footer-contact div:hover {
+    background: rgba(0, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.footer-contact i {
+    color: #00e0ff;
+    text-shadow: 0 0 8px #00e0ff;
+    font-size: 1rem;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+    .footer-contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+  .cardcontainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    margin-top: 0;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  .intro {
+    position: relative;
+    transform: none;
+    height: auto;
+    background: rgba(29, 37, 48, 0.85);
+  }
+
+  .card:hover .intro {
+    transform: none;
+  }
+
+  .card:hover img {
+    filter: brightness(100%);
+  }
+
+  .intro h1 {
+    font-size: 20px;
+  }
+
+  .intro p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    height: 90vh; /* sedikit lebih pendek di hp */
+  }
+
+  .block {
+    padding-top: 80px; /* biar gak nabrak slider */
+  }
+}
+@media (max-width: 768px) {
+    .slider-wrapper {
+        height: 90vh;
+    }
+
+    .slider-nav {
+        bottom: 8%;
+    }
+
+    .hero-text {
+        top: 45%;
+        font-size: clamp(1rem, 4vw, 2rem);
+    }
+}

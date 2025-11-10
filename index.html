@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Langit Nusantara</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styleindexhome.css">
+    <link rel="icon" type="image/x-icon" href="fotovideo/logotravel.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="hero-header">
+           <a href="index.html"><img src="fotovideo/logotravel.png" alt="logo travel"></a>
+           <div class="identitas">
+           <h1>Langit Indonesia</h1>
+           <h4>Yogyakarta - Papua - Sumatera Barat</h4>
+           </div>
+            
+         
+        <nav class="navbar">
+            <div class="navbar-container">
+            <ul class="sidebar">
+                <li onclick="hidesidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li class="has-dropdown">
+                    <a href="#" class="dropdown-toggle">Destinasi Wisata</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Yogyakarta.html">Yogyakarta</a></li>
+                        <li><a href="sumatrabarat.html">Sumatera Barat</a></li>
+                        <li><a href="Papua.html">Papua</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="galeri.html">Galeri</a>
+                </li>
+                <li><a href="tentangkami.html">Tentang Kami</a></li>
+            </ul>
+
+            <ul class="menu">
+                <li class="hideonmobile"><a href="#" class="active">Beranda</a></li>
+                <li class="hideonmobile">
+                    <a href="#">Destinasi Wisata</a>
+                    <ul class="dropdown">
+                        <li><a href="Yogyakarta.html">Yogyakarta</a></li>
+                        <li><a href="sumatrabarat.html">Sumatera Barat</a></li>
+                        <li><a href="Papua.html">Papua</a></li>
+                    </ul>
+                </li>
+                <li class="hideonmobile">
+                    <a href="galeri.html">Galeri</a>
+                </li>
+                <li class="hideonmobile"><a href="tentangkami.html">Tentang Kami</a></li>
+                <Li ondblclick="showsidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></Li>
+            </ul>
+        </nav>
+        </div>
+        <script>
+            function showsidebar() {
+             const sidebar = document.querySelector('.sidebar')
+             sidebar.style.display = 'flex'
+            }
+            function hidesidebar() {
+             const sidebar = document.querySelector('.sidebar')
+             sidebar.style.display = 'none'
+            }
+        </script>
+        
+    </header>
+         
+<section class="container">
+    <div class="hero-text">
+    <h1>Selamat datang di Indonesia yang Memukau</h1>
+    <p>Perjalanan Menarik Menanti Anda!!</p>
+  </div>
+    <div class="slider-wrapper">
+        <div class="slider" id="slider">
+            <video class="slide1" src="fotovideo/Raja Ampat Islands in Indonesia.mp4" autoplay muted loop></video>
+            <video class="slide"2 src="fotovideo/Candi Borobudur (Cinematic Video).mp4" autoplay muted loop></video>
+            <video class="slide3" src="fotovideo/Wonderland West Sumatra 4K.mp4" autoplay muted loop></video>
+        </div>
+        <div class="slider-nav">
+            <a href="#slider1"></a>
+            <a href="#slider2"></a>
+            <a href="#slider3"></a>
+        </div>
+    </div>
+</section>
+
+<script>
+const slider = document.querySelector('.slider');
+const slides = slider.querySelectorAll('video');
+let index = 0;
+
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  slider.scrollTo({
+    left: slides[index].offsetLeft,
+    behavior: 'smooth'
+  });
+}
+
+setInterval(nextSlide, 10000);
+
+const navLinks = document.querySelectorAll('.slider-nav a');
+navLinks.forEach((link, i) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    slider.scrollTo({
+      left: slides[i].offsetLeft,
+      behavior: 'smooth'
+    });
+    index = i;
+  });
+});
+</script>
+  
+  <main class="block">
+   <div class="cardcontainer">
+    <div class="card">
+       <img src="fotovideo/Yogyakarta tugu.jpg" alt="Yogyakarta">
+       <div class="intro">
+         <h1>Yogyakarta</h1>
+         <p>Kota Yogyakarta adalah ibu kota sekaligus pusat pemerintahan dan perekonomian Daerah Istimewa Yogyakarta, Indonesia. Kota Yogyakarta mempertahankan konsep tradisional dan budaya Jawa. Jumlah penduduk kota ini pada akhir tahun 2024 sebanyak 415.605 jiwa.</p>
+         <a href="Yogyakarta.html">Lihat Selengkapnya!..</a>
+       </div>
+    </div>
+    <div class="card">
+       <img src="fotovideo/Raja ampat jpg.jpeg" alt="Papua">
+       <div class="intro">
+         <h1>Papua</h1>
+         <p>Kota Yogyakarta adalah ibu kota sekaligus pusat pemerintahan dan perekonomian Daerah Istimewa Yogyakarta, Indonesia. Kota Yogyakarta mempertahankan konsep tradisional dan budaya Jawa. Jumlah penduduk kota ini pada akhir tahun 2024 sebanyak 415.605 jiwa.</p>
+         <a href="Papua.html">Lihat Selengkapnya!..</a>
+       </div>
+    </div>
+    <div class="card">
+       <img src="fotovideo/jam gadang 1.jpeg" alt="Sumatera Barat">
+       <div class="intro">
+         <h1>Sumatera Barat</h1>
+         <p>Kota Yogyakarta adalah ibu kota sekaligus pusat pemerintahan dan perekonomian Daerah Istimewa Yogyakarta, Indonesia. Kota Yogyakarta mempertahankan konsep tradisional dan budaya Jawa. Jumlah penduduk kota ini pada akhir tahun 2024 sebanyak 415.605 jiwa.</p>
+         <a href="sumatrabarat.html">Lihat Selengkapnya!..</a>
+       </div>
+    </div>
+    </div>
+    </main>
+
+<footer>
+    <h3>Contact Information</h3>
+    <div class="contact-info">
+        <div class="info-item"><i class="fas fa-phone"></i> +62 813-1345-6302</div>
+        <div class="info-item"><i class="fab fa-whatsapp"></i> +62 813-1345-6302</div>
+        <div class="info-item"><i class="fas fa-envelope"></i> Mitakasolution@gmail.com</div>
+    </div>
+    <p>&copy; 2025 Wisata Indonesia</p>
+</footer>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</body>
+</html>

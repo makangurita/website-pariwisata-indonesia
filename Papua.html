@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Langit Nusantara</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylepapua.css">
+    <link rel="icon" type="image/x-icon" href="fotovideo/logotravel.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="hero-header">
+           <a href="index.html"><img src="fotovideo/logotravel.png" alt="logo travel"></a>
+           <div class="identitas">
+           <h1>Langit Indonesia</h1>
+           <h4>Yogyakarta - Papua - Sumatera Barat</h4>
+           </div>
+           
+            
+        <nav class="navbar">
+            <div class="navbar-container">
+            <ul class="sidebar">
+                <li onclick="hidesidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="index.html">Beranda</a></li>
+                <li class="has-dropdown">
+                    <a href="#" class="dropdown-toggle">Destinasi Wisata</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Yogyakarta.html">Yogyakarta</a></li>
+                        <li><a href="sumatrabarat.html">Sumatera Barat</a></li>
+                        <li><a href="Papua.html">Papua</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="galeri.html">Galeri</a>
+                </li>
+                <li><a href="tentangkami.html">Tentang Kami</a></li>
+            </ul>
+
+            <ul class="menu">
+                <li class="hideonmobile"><a href="index.html" class="active">Beranda</a></li>
+                <li class="hideonmobile">
+                    <a href="#">Destinasi Wisata</a>
+                    <ul class="dropdown">
+                        <li><a href="Yogyakarta.html">Yogyakarta</a></li>
+                        <li><a href="sumatrabarat.html">Sumatera Barat</a></li>
+                        <li><a href="Papua.html">Papua</a></li>
+                    </ul>
+                </li>
+                <li class="hideonmobile">
+                    <a href="galeri.html">Galeri</a>
+                </li>
+                <li class="hideonmobile"><a href="tentangkami.html">Tentang Kami</a></li>
+                <Li ondblclick="showsidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></Li>
+            </ul>
+        </nav>
+        </div>
+        <script>
+            function showsidebar() {
+             const sidebar = document.querySelector('.sidebar')
+             sidebar.style.display = 'flex'
+            }
+            function hidesidebar() {
+             const sidebar = document.querySelector('.sidebar')
+             sidebar.style.display = 'none'
+            }
+        </script>
+    </header>
+    
+    <section class="banner">
+        <img src="fotovideo/papuabaratdaya.jpg">
+        <div class="overlay"></div>
+        <div class="banner-text">
+             <h1>Selamat datang di PAPUA!</h1>
+             <p>Perjalanan Menarik Menanti Anda!!</p>
+         </div>
+    </section>
+
+    <main class="block">
+    <section class="box-mapyog">
+        <div class="mapbox">
+            <h1>Papua Location!</h1>
+            <p>Papua adalah provinsi yang terletak di pesisir utara Pulau Papua. Provinsi Papua sebelumnya bernama Irian Barat (1956 – 1973) dan Irian Jaya (1973 – 2000) yang mencakup seluruh Tanah Papua bekas Keresidenan Nugini Barat. Ibu kota Papua berada di Kota Jayapura, yang berbatasan langsung dengan negara Papua Nugini.</p><br>
+            
+            <p>Pada tanggal 30 Juni 2022, wilayah provinsi Papua mengalami pemekaran, yang membentuk provinsi baru yakni Provinsi Papua Tengah, Papua Pegunungan, serta Papua Selatan. Setelah pemekaran provinsi baru, pada pertengahan tahun 2024, jumlah penduduk provinsi Papua sebanyak 1.101.733 jiwa.</p><br>
+            <p>Provinsi Papua memiliki luas sekitar 82.681 km2, pulau Papua berada di ujung timur dari wilayah Indonesia, dengan potensi sumber daya alam yang bernilai ekonomis dan strategis, dan telah mendorong bangsa-bangsa asing untuk menguasai pulau Papua. Sebelum dimekarkan, provinsi Papua memiliki luas 312.224,37 km2 dan merupakan provinsi terbesar dan terluas pertama di Indonesia.</p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4082350.915379518!2d135.24883513745925!3d-2.276002882534806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x683b2c04aaff9273%3A0xeba94e9c5eefe673!2sPapua!5e0!3m2!1sid!2sid!4v1761655065927!5m2!1sid!2sid"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    
+    <section class="boxwisata">
+  <article class="artikelwisata">
+    <h1>WISATA ALAM di PAPUA!</h1>
+    <p>Temukan keindahan luar biasa di Raja Ampat, Danau Sentani, dan Pegunungan Arfak — surga bagi pencinta laut, petualangan, dan fotografi alam.</p>
+    <a href="alampapua.html">Lihat selengkapnya Yuk!..</a>
+  </article>
+
+  <article class="artikelwisata">
+    <h1>BUDAYA DAN SEJARAH di PAPUA!</h1>
+    <p>Kenali kekayaan budaya lewat Festival Danau Sentani, tarian tradisional, hingga rumah adat Honai yang mencerminkan kearifan lokal masyarakat Papua.</p>
+    <a href="sejarahpapua.html">Lihat selengkapnya Yuk!..</a>
+  </article>
+
+  <article class="artikelwisata">
+    <h1>KULINER LEZAT di PAPUA!</h1>
+    <p>Cicipi beragam makanan khas seperti papeda, ikan bakar, dan sagu kelapa, sambil menikmati suasana café dan restoran tepi pantai di Jayapura dan Sentani.</p>
+    <a href="kulinerpapua.html">Lihat selengkapnya Yuk!..</a>
+  </article>
+</section>
+    </main>
+
+    <footer>
+    <h3>Contact Information</h3>
+    <div class="contact-info">
+        <div class="info-item"><i class="fas fa-phone"></i> +62 813-1345-6302</div>
+        <div class="info-item"><i class="fab fa-whatsapp"></i> +62 813-1345-6302</div>
+        <div class="info-item"><i class="fas fa-envelope"></i> Mitakasolution@gmail.com</div>
+    </div>
+    <p>&copy; 2025 Wisata Indonesia</p>
+</footer>
+
+</body>
+</html>
